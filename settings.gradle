@@ -1,0 +1,2 @@
+rootProject.name='Fruit-Trading-Android'
+include ':app'
