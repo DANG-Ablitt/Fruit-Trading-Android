@@ -3,27 +3,64 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     android:padding="10dp">
 
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/card_view1"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         card_view:cardCornerRadius="10dp">
 
+        <LinearLayout
+            android:id="@+id/cart_goto_shop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tv_source_name"
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/shop_ico"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/s_jr_ico"
+                android:text="喜玛拉亚店"
+                android:textColor="@color/grey_color2"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        card_view:cardCornerRadius="10dp">
+
+
+
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:id="@+id/image1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_margin="15dp"
             android:src="@drawable/iphone13"
             android:contentDescription="测试用图" />
 
         <LinearLayout
-            android:layout_width="160dp"
+            android:layout_width="210dp"
             android:layout_gravity="right"
             android:layout_height="match_parent"
-            android:paddingRight="0dp"
             android:layout_margin="15dp"
             android:orientation="vertical" >
             <TextView
@@ -31,44 +68,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/separatorColor"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:text="苹果手机13"/>
+            <RelativeLayout
+                android:id="@+id/addressmanager_layout1"
+                android:padding="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/separatorColor"
-                android:textSize="15sp"
-                android:paddingTop="6dp"
+                android:textColor="@color/red_background"
+                android:textSize="10sp"
+                android:padding="2dp"
                 android:textStyle="bold"
-                android:text="详细参数："/>
+                android:background="@drawable/textview_border"
+                android:text="秒杀预告"/>
             <TextView
                 android:id="@+id/detail1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:paddingTop="5dp"
-                android:textStyle="bold"
-                android:text="A14仿生芯片|6.7英寸屏幕"/>
-            <TextView
-                android:id="@+id/detail2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:text="256G大容量存储|5G网络"/>
-            <TextView
-                android:id="@+id/count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:textSize="11sp"
                 android:textColor="@color/red_background"
-                android:text="库存:20"/>
-
+                android:padding="2dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="50dp"
+                android:text="2021-12-22 16:15:00"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/addressmanager_layout2"
+                android:padding="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red_background"
+                    android:textSize="10sp"
+                    android:padding="2dp"
+                    android:background="@drawable/textview_border"
+                    android:textStyle="bold"
+                    android:text="商品库存"/>
+                <TextView
+                    android:id="@+id/detail12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:padding="2dp"
+                    android:textColor="@color/red_background"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="50dp"
+                    android:text="12"/>
+            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/addressmanager_layout"
-                android:padding="1dp"
+                android:padding="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -87,26 +142,51 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/amount2"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="0dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_toRightOf="@id/amount2"
                     android:text="原￥5600"
-                    android:textColor="@color/red_background"
-                    android:textSize="12sp"
+                    android:textColor="@color/grey_color2"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
 
+            <RelativeLayout
+                android:id="@+id/addressmanager_layout3"
+                android:padding="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btLogin"
-                android:layout_width="150dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
                 android:layout_centerVertical="true"
                 android:background="@drawable/bt_uisquare"
-                android:text="等待秒杀开始"
+                android:text="到点提醒"
+                android:focusable="false"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btLogin1"
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bt_uisquare"
+                    android:layout_toRightOf="@id/btLogin"
+                    android:text="秒杀"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

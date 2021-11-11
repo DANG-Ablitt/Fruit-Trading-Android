@@ -13,7 +13,15 @@ public class MSListItem {
      */
     private String name;
     /**
-     * 数量
+     * 取货门店
+     */
+    private String address;
+    /**
+     * 开始时间
+     */
+    private String time;
+    /**
+     * 库存数量
      */
     private Integer count;
     /**
@@ -28,24 +36,21 @@ public class MSListItem {
      * 图片url
      */
     private String url;
-    /**
-     * 详细参数
-     */
-    private String detail;
 
     /**
      * 有参构造器
      */
     public MSListItem(Long id, String name, Integer count,
                       String amount1, String amount2,
-                      String url, String detail) {
+                      String url,String address,String time) {
         this.id = id;
         this.name = name;
         this.count = count;
         this.amount1 = amount1;
         this.amount2 = amount2;
         this.url = url;
-        this.detail = detail;
+        this.address=address;
+        this.time=time;
     }
 
     /**
@@ -99,11 +104,19 @@ public class MSListItem {
         this.url = url;
     }
 
-    public String getDetail() {
-        return detail;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDetail(String detail) {
-        this.detail = detail;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
