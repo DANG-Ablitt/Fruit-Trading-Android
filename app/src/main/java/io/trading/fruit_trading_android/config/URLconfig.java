@@ -9,5 +9,9 @@ public class URLconfig {
     public static String URL_LOGIN="/auth/login";
     //用户登出
     public static String URL_LOGOUT="/auth/logout";
+    // 获取秒杀商品列表
+    public static String URL_LISTMS="/api/spike";
+    // 获取秒杀商品详细信息
+    public static String URL_INFOMS="/api/";
 
 }

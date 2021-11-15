@@ -15,11 +15,11 @@ public class MSListItem {
     /**
      * 取货门店
      */
-    private String address;
+    //private String dept;
     /**
      * 开始时间
      */
-    private String time;
+    private String time2;
     /**
      * 库存数量
      */
@@ -42,15 +42,15 @@ public class MSListItem {
      */
     public MSListItem(Long id, String name, Integer count,
                       String amount1, String amount2,
-                      String url,String address,String time) {
+                      String url,String time2) {
         this.id = id;
         this.name = name;
         this.count = count;
         this.amount1 = amount1;
         this.amount2 = amount2;
         this.url = url;
-        this.address=address;
-        this.time=time;
+        //this.dept=dept;
+        this.time2=time2;
     }
 
     /**
@@ -104,19 +104,19 @@ public class MSListItem {
         this.url = url;
     }
 
-    public String getAddress() {
-        return address;
+//    public String getDept() {
+//        return dept;
+//    }
+//
+//    public void setDept(String dept) {
+//        this.dept = dept;
+//    }
+
+    public String getTime2() {
+        return time2;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+    public void setTime2(String time2) {
+        this.time2 = time2;
     }
 }

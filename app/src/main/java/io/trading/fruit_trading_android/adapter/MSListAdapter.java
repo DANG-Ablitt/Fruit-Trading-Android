@@ -38,10 +38,10 @@ public class MSListAdapter extends ArrayAdapter<MSListItem> {
         Glide.with(getContext()).load(item.getUrl()).into(imageView);
         //绑定店铺名称
         TextView textViewaddress = (TextView) view.findViewById(R.id.tv_source_name);
-        textViewaddress.setText(item.getAddress());
+        //textViewaddress.setText(item.getDept());
         //绑定开始时间
         TextView textViewtime = (TextView) view.findViewById(R.id.detail1);
-        textViewtime.setText(item.getTime());
+        textViewtime.setText(item.getTime2());
         //绑定商品名称
         TextView textViewname = (TextView) view.findViewById(R.id.name);
         textViewname.setText(item.getName());
